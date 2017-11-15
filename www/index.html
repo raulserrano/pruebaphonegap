@@ -43,7 +43,7 @@
     }
     
     
-    #cerrar {
+    #guardar {
         width: 2em;
         height: 2em;
         float: right;
@@ -93,11 +93,12 @@
 
 
 <script>
+  
     window.addEventListener('load',iniciar)
     function iniciar(args) {
         //Definici�n de variables.
  //       var notas = {nota:[]}
-        var cerrar = document.getElementById('cerrar')
+        var guardar = document.getElementById('guardar')
         var contenedor = document.getElementById('contenedor');
         
         //Creaci�n de notainicial
@@ -107,17 +108,18 @@
         notainicial.setAttribute('class','nota');
         notainicial.setAttribute('contentEditable','true');
         contenedor.appendChild(notainicial);
-        notainicial.focus();
+      //  notainicial.focus();
        
         
        
         
         //Asignaci�n de eventos
-        cerrar.addEventListener('click',grabartodas)
+        guardar.addEventListener('click',grabartodas)
         
         //llamada funciones
         mostrarnotas();
-        setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
+      //  setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
+         notainicial.focus();
     //    $( "#notainicial" ).trigger( "tap" )
    //     Keyboard.show();
     
@@ -233,11 +235,10 @@
 <body>
 <div id="contenedor">
     <div id='cabecera'>
-        <img id='cerrar' src="cerrar5.png" />
+        <img id='guardar' src="save.png" /> 
         <h1>Quick Note</h1>
-        
     </div>
-   <!--  <span id='cerrar' class="ui-icon ui-icon-arrowthick-1-n"></span>-->
+    
 </div>
 
 
