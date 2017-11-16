@@ -95,7 +95,7 @@
 
 <script>
   
-    window.addEventListener('onDeviceReady',iniciar)
+    window.addEventListener('load',iniciar)
     
     function iniciar(args) {
         //Definici�n de variables.
@@ -124,7 +124,7 @@
          notainicial.focus();
          setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
     //    $( "#notainicial" ).trigger( "tap" )
-   //     Keyboard.show();
+         Keyboard.show();
     
 
         
