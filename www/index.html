@@ -120,8 +120,8 @@
         
         //llamada funciones
         mostrarnotas();
-        setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
-        // notainicial.focus();
+       // setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
+         notainicial.focus();
     //    $( "#notainicial" ).trigger( "tap" )
    //     Keyboard.show();
     
@@ -214,12 +214,19 @@
     //con este efecto se eliminan del DOMv 
    //  $( function() {
     
-        $(window).on('swipeleft swiperight', function(evento){
+        $(window).on('swipeleft', function(evento){
                                 
                               //console.dir(evento.target)
                           
                               $(evento.target).animate(
                                   { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
+                                });
+     $(window).on('swiperight', function(evento){
+                                
+                              //console.dir(evento.target)
+                          
+                              $(evento.target).animate(
+                                  { "margin-left": "100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
                                 });
                         
    // });
