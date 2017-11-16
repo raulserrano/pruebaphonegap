@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <style>
     html {
-         background-color: #e5e5e5;
+         background-color: #efefef;
     }
     
     * {
@@ -22,7 +22,7 @@
     
     h1 {
       font-size: 1.6em;
-      background-color: #fcfcfc;
+       background-color:#efefef;
       color: #333333;
     }
     
@@ -30,6 +30,7 @@
         width: 100%;
         height: 100%;
         clear: both;
+        background-color: #efefef;
     }
     
     #cabecera {
@@ -37,13 +38,13 @@
         padding: 5px;
         padding-top: 1em;
         margin: auto;
-        background-color: #FCFCFC;
+        background-color: #efefef;
         text-align: center;
         height: 3em;
     }
     
     
-    #cerrar {
+    #guardar {
         width: 2em;
         height: 2em;
         float: right;
@@ -52,7 +53,7 @@
     
     .nota {
         background-color: #fCfcfc;
-        width: 95%;
+        width: 90%;
         margin-left: auto;
         margin-right: auto;
         margin-top: 8px;
@@ -93,11 +94,13 @@
 
 
 <script>
-    window.addEventListener('load',iniciar)
+  
+    //window.addEventListener('load',iniciar)
+    $(iniciar)
     function iniciar(args) {
         //Definici�n de variables.
  //       var notas = {nota:[]}
-        var cerrar = document.getElementById('cerrar')
+        var guardar = document.getElementById('guardar')
         var contenedor = document.getElementById('contenedor');
         
         //Creaci�n de notainicial
@@ -107,17 +110,18 @@
         notainicial.setAttribute('class','nota');
         notainicial.setAttribute('contentEditable','true');
         contenedor.appendChild(notainicial);
-        notainicial.focus();
+      //  notainicial.focus();
        
         
        
         
         //Asignaci�n de eventos
-        cerrar.addEventListener('click',grabartodas)
+        guardar.addEventListener('click',grabartodas)
         
         //llamada funciones
         mostrarnotas();
         setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
+        // notainicial.focus();
     //    $( "#notainicial" ).trigger( "tap" )
    //     Keyboard.show();
     
@@ -210,12 +214,12 @@
     //con este efecto se eliminan del DOMv 
    //  $( function() {
     
-        $(window).on('swipeleft', function(evento){
+        $(window).on('swipeleft swiperight', function(evento){
                                 
                               //console.dir(evento.target)
                           
                               $(evento.target).animate(
-                                  { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(200)});
+                                  { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
                                 });
                         
    // });
@@ -233,11 +237,10 @@
 <body>
 <div id="contenedor">
     <div id='cabecera'>
-        <img id='cerrar' src="cerrar5.png" />
+        <img id='guardar' src="save.png" /> 
         <h1>Quick Note</h1>
-        
     </div>
-   <!--  <span id='cerrar' class="ui-icon ui-icon-arrowthick-1-n"></span>-->
+    
 </div>
 
 
