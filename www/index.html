@@ -220,18 +220,18 @@
                             //    alert(evento.target);
                           
                               $(evento.target).animate(
-                                  { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
-                                  grabartodas();
+                                  { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100);grabartodas()});
+                                 
                                 });
-     $(window).on('swiperight', function(evento){
-                                
-                              //console.dir(evento.target)
-                          
-                              $(evento.target).animate(
-                                  { "margin-left": "100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
-                                  grabartodas();
-                                    
-                                });
+         $(window).on('swiperight', function(evento){
+
+                                  //console.dir(evento.target)
+
+                                  $(evento.target).animate(
+                                      { "margin-left": "100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100);grabartodas()});
+
+
+                                    });
                         
    // });
      
