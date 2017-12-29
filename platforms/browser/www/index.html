@@ -95,8 +95,8 @@
 
 <script>
   
-    //window.addEventListener('load',iniciar)
-    $(iniciar)
+    window.addEventListener('load',iniciar)
+    
     function iniciar(args) {
         //Definici�n de variables.
  //       var notas = {nota:[]}
@@ -120,10 +120,11 @@
         
         //llamada funciones
         mostrarnotas();
-       // setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
+      
          notainicial.focus();
+         setTimeout(function(){ $( "#notainicial" ).trigger( "tap" );},100);
     //    $( "#notainicial" ).trigger( "tap" )
-   //     Keyboard.show();
+         Keyboard.show();
     
 
         
@@ -216,10 +217,11 @@
     
         $(window).on('swipeleft', function(evento){
                                 
-                              //console.dir(evento.target)
+                            //    alert(evento.target);
                           
                               $(evento.target).animate(
                                   { "margin-left": "-100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
+                                  grabartodas();
                                 });
      $(window).on('swiperight', function(evento){
                                 
@@ -227,6 +229,8 @@
                           
                               $(evento.target).animate(
                                   { "margin-left": "100%" }, 300,function()                   {$(evento.target).remove();navigator.vibrate(100)});
+                                  grabartodas();
+                                    
                                 });
                         
    // });
