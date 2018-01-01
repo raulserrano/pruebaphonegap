@@ -10,8 +10,8 @@
     <content src="index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
-    <plugin name=" cordova-plugin-keyboard" source="npm" spec="~1.2.0" />
-    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-keyboard" source="npm" spec="1.2.2" />
+    <plugin name="cordova-plugin-vibration" source="npm" spec="2.1.6" />
     <platform name="android">
         <icon src="www/res/icon/android/icon.png" />
          <splash src="www/res/screen/android/screen.png" />
